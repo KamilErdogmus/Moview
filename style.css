@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+  font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #2c5477;
+  --assistant-color: #000000;
+}
+body {
+  background-color: var(--main-color);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--assistant-color);
+  padding: 1.2rem;
+  h1 {
+    letter-spacing: 5px;
+    color: #fff;
+  }
+  .search {
+    background-color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: 0;
+    width: 100%;
+    margin-left: 0.6rem;
+    font-size: 1.1rem;
+    color: black;
+    &:focus {
+      outline: none;
+      scale: 1.05;
+    }
+    ::placeholder {
+      color: #6c757d;
+    }
+  }
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--assistant-color);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  img {
+    width: 100%;
+  }
+  .movie-info {
+    color: #79b8f3;
+    padding: 0.6rem 1rem 1rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      padding: 0.25rem 0.5rem;
+      border-radius: 1rem;
+      font-size: 89%;
+      font-weight: bold;
+      background-color: var(--main-color);
+    }
+  }
+  &:hover .overview {
+    transform: translateY(0);
+  }
+}
+.movie-info span.green {
+  color: lightgreen;
+}
+.movie-info span.orange {
+  color: lightsalmon;
+}
+.movie-info span.red {
+  color: lightcoral;
+}
+.overview {
+  background-color: #566b84;
+  color: #111;
+  position: absolute;
+  padding: 2rem;
+  bottom: 0;
+  overflow-y: auto;
+  transform: translateY(101%);
+  right: 0;
+  max-height: 100%;
+  left: 0;
+  overflow-y: auto;
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+footer {
+  background-color: var(--assistant-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h3 {
+    letter-spacing: 5px;
+    color: #fff;
+    margin-bottom: 9px;
+  }
+  ul {
+    li {
+      list-style-type: none;
+      display: inline;
+      margin-right: 1px;
+      a {
+        text-decoration: none;
+        color: #2066a0;
+      }
+    }
+  }
+  small {
+    margin-top: 0.5rem;
+    color: #8197a4;
+    font-size: 0.8rem;
+  }
+}
