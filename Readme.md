@@ -14,7 +14,7 @@ This is a web application developed using The Movie DB API to display informatio
 
 1. Clone the repository:
    ```bash
-   https://github.com/KamilErdogmus/Moview.git
+   git clone https://github.com/KamilErdogmus/Moview.git
    ```
 2. Open the index.html file in your browser
 
